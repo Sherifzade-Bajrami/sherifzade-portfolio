@@ -5,21 +5,18 @@ import About from "./sections/About";
 import Expertise from "./sections/Expertise";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
     <main className="min-h-screen bg-[#090b0e]">
       <Navbar />
-
       <Hero />
-
       <About />
-
       <Expertise />
-
       <Projects />
-      
       <Experience />
+      <Contact />
     </main>
   );
 }
