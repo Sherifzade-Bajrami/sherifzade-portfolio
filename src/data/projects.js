@@ -1,36 +1,16 @@
-const projects = [
-  {
-    id: 1,
-    number: "01",
-    title: "NovaPages",
-    category: "Ecommerce / Digital Products",
-    description:
-      "A modern digital bookstore focused on a clean purchasing experience, downloadable products and a carefully structured ecommerce journey.",
-    technologies: [
-      "WordPress",
-      "WooCommerce",
-      "Elementor Pro",
-      "PHP",
-      "SEO",
-    ],
-    image: null,
-  },
+import highwattage1 from "../assets/projects/highwattage-1.png";
+import highwattage2 from "../assets/projects/highwattage-2.png";
+import highwattage3 from "../assets/projects/highwattage-3.png";
 
-  {
-    id: 2,
-    number: "02",
-    title: "React Project",
-    category: "Frontend Application",
-    description:
-      "A modern frontend application built around reusable components, responsive layouts and clean React architecture.",
-    technologies: [
-      "React",
-      "JavaScript",
-      "Tailwind CSS",
-      "REST API",
-    ],
-    image: null,
-  },
+import swisssuite1 from "../assets/projects/swisssuite-1.png";
+import swisssuite2 from "../assets/projects/swisssuite-2.png";
+
+const customThemeScreenshots = [
+  highwattage1,
+  highwattage2,
+  highwattage3,
+  swisssuite1,
+  swisssuite2,
 ];
 
-export default projects;
+export default customThemeScreenshots;

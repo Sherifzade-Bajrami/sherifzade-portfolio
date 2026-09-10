@@ -1,4 +1,7 @@
-function Hero() {
+import { motion } from "motion/react";
+import TypingCode from "./TypingCode";
+
+function Hero({ startAnimation }) {
   return (
     <section
       id="home"
@@ -47,104 +50,40 @@ function Hero() {
       {/* RIGHT SIDE */}
       <div className="w-full lg:justify-self-end">
         <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#111318] shadow-2xl shadow-black/30">
-          
           {/* WINDOW HEADER */}
           <div className="flex h-12 items-center gap-2 border-b border-white/[0.06] bg-[#15171c] px-5">
-            <span className="h-2 w-2 rounded-full bg-zinc-600"></span>
-            <span className="h-2 w-2 rounded-full bg-zinc-600"></span>
-            <span className="h-2 w-2 rounded-full bg-zinc-600"></span>
+            <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
 
-            <span className="ml-auto font-mono text-[11px] text-zinc-600">
+            <span className="ml-auto font-mono text-sm text-zinc-600">
               developer.js
             </span>
           </div>
 
-          {/* CODE */}
-          <div className="overflow-x-auto p-6 font-mono text-[12px] leading-7 text-zinc-400 sm:p-8 sm:text-[13px]">
-            <p>
-              <span className="text-violet-400">const</span>{" "}
-              <span className="text-zinc-200">developer</span> = {"{"}
-            </p>
-
-            <p className="pl-5">
-              name:{" "}
-              <span className="text-emerald-300">
-                "Sherifzade Bajrami"
-              </span>
-              ,
-            </p>
-
-            <p className="pl-5">
-              role:{" "}
-              <span className="text-emerald-300">
-                "Web Developer"
-              </span>
-              ,
-            </p>
-
-            <p className="pl-5">
-              stack: [
-            </p>
-
-            <p className="pl-10">
-              <span className="text-emerald-300">"React"</span>,
-            </p>
-
-            <p className="pl-10">
-              <span className="text-emerald-300">"JavaScript"</span>,
-            </p>
-
-            <p className="pl-10">
-              <span className="text-emerald-300">"WordPress"</span>,
-            </p>
-
-            <p className="pl-10">
-              <span className="text-emerald-300">"PHP"</span>,
-            </p>
-
-            <p className="pl-10">
-              <span className="text-emerald-300">"Tailwind CSS"</span>
-            </p>
-
-            <p className="pl-5">],</p>
-
-            <p className="pl-5">
-              mindset:{" "}
-              <span className="text-emerald-300">
-                "Build. Test. Improve."
-              </span>
-            </p>
-
-            <p>{"};"}</p>
-          </div>
+          <TypingCode start={startAnimation} />
 
           {/* BOTTOM STATS */}
           <div className="grid grid-cols-3 border-t border-white/[0.06]">
             <div className="border-r border-white/[0.06] px-2 py-5 text-center">
-              <p className="text-[11px] font-medium text-zinc-300">
+              <p className="text-[12px] font-medium text-zinc-300">
                 Responsive
               </p>
-              <p className="mt-1 text-[10px] text-zinc-600">
-                Desktop → Mobile
-              </p>
+              <p className="mt-1 text-[11px] text-zinc-600">Desktop → Mobile</p>
             </div>
 
             <div className="border-r border-white/[0.06] px-2 py-5 text-center">
-              <p className="text-[11px] font-medium text-zinc-300">
+              <p className="text-[12px] font-medium text-zinc-300">
                 Performance
               </p>
-              <p className="mt-1 text-[10px] text-zinc-600">
-                Speed focused
-              </p>
+              <p className="mt-1 text-[11px] text-zinc-600">Speed focused</p>
             </div>
 
             <div className="px-2 py-5 text-center">
-              <p className="text-[11px] font-medium text-zinc-300">
+              <p className="text-[12px] font-medium text-zinc-300">
                 Maintainable
               </p>
-              <p className="mt-1 text-[10px] text-zinc-600">
-                Clean structure
-              </p>
+              <p className="mt-1 text-[11px] text-zinc-600">Clean structure</p>
             </div>
           </div>
         </div>

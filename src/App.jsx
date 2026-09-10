@@ -1,25 +1,55 @@
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import IntroLoader from "./components/IntroLoader";
+import TechMarquee from "./components/TechMarquee";
 
 import About from "./sections/About";
 import Expertise from "./sections/Expertise";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
-import Footer from "./components/Footer";
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+      document.body.style.overflow = "";
+    }, 2200);
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
-    <main className="min-h-screen bg-[#090b0e]">
-      <Navbar />
-      <Hero />
-      <About />
-      <Expertise />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <AnimatePresence mode="wait">
+        {showIntro && <IntroLoader />}
+      </AnimatePresence>
+
+      <main className="min-h-screen bg-[#090b0e]">
+        <Navbar />
+
+    <Hero startAnimation={!showIntro} />
+        <TechMarquee />
+        <About />
+        <Expertise />
+        <Projects />
+        <Experience />
+        <Contact />
+
+        <Footer />
+      </main>
+    </>
   );
 }
 

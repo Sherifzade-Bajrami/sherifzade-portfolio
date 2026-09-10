@@ -1,127 +1,223 @@
+import { useState } from "react";
+import { motion } from "motion/react";
+
 function ProjectCard({ project, index }) {
-  const reverse = index % 2 !== 0;
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setImageIndex((current) =>
+      current === project.images.length - 1 ? 0 : current + 1,
+    );
+  };
+
+  const previousImage = () => {
+    setImageIndex((current) =>
+      current === 0 ? project.images.length - 1 : current - 1,
+    );
+  };
 
   return (
-    <article className="group border-t border-white/[0.08] py-14 lg:py-20">
-      {/* TOP INFO */}
-      <div className="mb-7 flex items-center justify-between">
-        <span className="font-mono text-[14px] font-semibold text-violet-400">
-          {project.number}
-        </span>
+    <motion.article
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="
+        group
+        overflow-hidden
+        rounded-2xl
+        border
+        border-white/[0.09]
+        bg-[#111318]
+        transition
+        duration-300
+        hover:-translate-y-1
+        hover:border-violet-400/30
+      "
+    >
+      {/* TOP BAR */}
+      <div
+        className="
+          flex
+          h-10
+          items-center
+          gap-1.5
+          border-b
+          border-white/[0.06]
+          bg-[#15171c]
+          px-4
+        "
+      >
+        <span className="h-2 w-2 rounded-full bg-red-400/70" />
+        <span className="h-2 w-2 rounded-full bg-amber-400/70" />
+        <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
 
-        <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-zinc-500">
-          {project.category}
+        <span className="ml-auto font-mono text-[9px] text-zinc-600">
+          {String(index + 1).padStart(2, "0")}
         </span>
       </div>
 
-      {/* PROJECT CARD */}
-      <div
-        className={`
-          grid overflow-hidden rounded-[22px]
-          border border-white/[0.08]
-          bg-white/[0.025]
-          transition duration-500
-          hover:border-violet-400/25
-          hover:bg-white/[0.035]
-          lg:grid-cols-2
-        `}
-      >
-        {/* PREVIEW */}
-        <div
-          className={`
-            relative min-h-[340px] overflow-hidden
-            ${reverse ? "lg:order-2" : ""}
-          `}
-        >
-          {project.image ? (
-            <img
-              src={project.image}
-              alt={`${project.title} preview`}
+      {/* IMAGE AREA */}
+      <div className="relative aspect-[16/10] overflow-hidden bg-zinc-950">
+        <img
+          src={project.images[imageIndex]}
+          alt={`${project.title} screenshot ${imageIndex + 1}`}
+          className="
+            h-full
+            w-full
+            object-cover
+            object-top
+            transition
+            duration-700
+            ease-out
+            group-hover:scale-[1.03]
+          "
+        />
+
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+
+        {/* ARROWS */}
+        {project.images.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={previousImage}
               className="
-                h-full w-full object-cover
-                transition duration-700
-                group-hover:scale-[1.025]
+                absolute
+                left-3
+                top-1/2
+                flex
+                h-9
+                w-9
+                -translate-y-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-white/10
+                bg-black/55
+                text-sm
+                text-white
+                backdrop-blur-md
+                transition
+                hover:border-violet-400/40
+                hover:bg-violet-500/15
               "
-            />
-          ) : (
-            <div
+              aria-label="Previous screenshot"
+            >
+              ←
+            </button>
+
+            <button
+              type="button"
+              onClick={nextImage}
               className="
-                flex h-full min-h-[340px]
-                items-center justify-center
-                bg-[radial-gradient(circle_at_30%_20%,rgba(167,139,250,0.20),transparent_38%),linear-gradient(145deg,#16181e,#0d0f13)]
+                absolute
+                right-3
+                top-1/2
+                flex
+                h-9
+                w-9
+                -translate-y-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-white/10
+                bg-black/55
+                text-sm
+                text-white
+                backdrop-blur-md
+                transition
+                hover:border-violet-400/40
+                hover:bg-violet-500/15
+              "
+              aria-label="Next screenshot"
+            >
+              →
+            </button>
+          </>
+        )}
+
+        {/* SCREEN COUNT */}
+        {project.images.length > 1 && (
+          <div
+            className="
+              absolute
+              bottom-3
+              right-3
+              rounded-full
+              border
+              border-white/10
+              bg-black/60
+              px-2.5
+              py-1
+              font-mono
+              text-[10px]
+              text-zinc-300
+              backdrop-blur-md
+            "
+          >
+            {imageIndex + 1} / {project.images.length}
+          </div>
+        )}
+      </div>
+
+      {/* DOTS */}
+      {project.images.length > 1 && (
+        <div className="flex justify-center gap-2 px-6 pt-4">
+          {project.images.map((_, dotIndex) => (
+            <button
+              key={dotIndex}
+              type="button"
+              onClick={() => setImageIndex(dotIndex)}
+              aria-label={`Go to screenshot ${dotIndex + 1}`}
+              className={`h-[6px] rounded-full transition-all duration-300 ${
+                imageIndex === dotIndex
+                  ? "w-8 bg-violet-400"
+                  : "w-2 bg-zinc-600 hover:bg-zinc-400"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* CONTENT */}
+      <div className="p-6">
+        <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-violet-400">
+          {project.type}
+        </p>
+
+        <h3 className="mt-3 text-[23px] font-semibold tracking-[-0.8px] text-zinc-100">
+          {project.title}
+        </h3>
+
+        <p className="mt-3 text-[14px] leading-6 text-zinc-400">
+          {project.description}
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.technologies.map((technology) => (
+            <span
+              key={technology}
+              className="
+                rounded-full
+                border
+                border-white/[0.08]
+                px-2.5
+                py-1
+                text-[10px]
+                text-zinc-400
               "
             >
-              <div className="relative text-center">
-                <div className="mx-auto mb-6 h-[1px] w-12 bg-violet-400" />
-
-                <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-zinc-500">
-                  Selected Project
-                </p>
-
-                <p className="mt-3 text-[30px] font-semibold tracking-[-1px] text-zinc-200">
-                  {project.title}
-                </p>
-              </div>
-            </div>
-          )}
-
-          {/* SUBTLE OVERLAY */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        </div>
-
-        {/* CONTENT */}
-        <div
-          className={`
-            flex min-h-[340px] flex-col justify-center
-            p-8 sm:p-10 lg:p-12
-            ${reverse ? "lg:order-1" : ""}
-          `}
-        >
-          <p className="font-mono text-[13px] font-semibold uppercase tracking-[0.15em] text-violet-400">
-            {project.category}
-          </p>
-
-          <h3 className="mt-5 text-[38px] font-semibold tracking-[-1.7px] text-zinc-100 sm:text-[44px]">
-            {project.title}
-          </h3>
-
-          <p className="mt-5 max-w-[470px] text-[16px] leading-7 text-zinc-400">
-            {project.description}
-          </p>
-
-          {/* TECHNOLOGIES */}
-          <div className="mt-8 flex flex-wrap gap-2">
-            {project.technologies.map((technology) => (
-              <span
-                key={technology}
-                className="
-                  rounded-full
-                  border border-white/[0.09]
-                  bg-white/[0.02]
-                  px-3.5 py-2
-                  text-[12px]
-                  text-zinc-400
-                  transition duration-300
-                  group-hover:border-white/[0.14]
-                  group-hover:text-zinc-300
-                "
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-
-          {/* DECORATIVE LINE */}
-          <div className="mt-10 flex items-center gap-3">
-            <div className="h-px w-10 bg-violet-400 transition-all duration-500 group-hover:w-16" />
-
-            <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-600">
-              Case Study
+              {technology}
             </span>
-          </div>
+          ))}
         </div>
+
+        <div className="mt-6 h-px w-8 bg-violet-400 transition-all duration-500 group-hover:w-16" />
       </div>
-    </article>
+    </motion.article>
   );
 }
 
