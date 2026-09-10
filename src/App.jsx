@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import About from "./sections/About";
 import Expertise from "./sections/Expertise";
 import Projects from "./sections/Projects";
-
+import Experience from "./sections/Experience";
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
       <Expertise />
 
       <Projects />
+      
+      <Experience />
     </main>
   );
 }
