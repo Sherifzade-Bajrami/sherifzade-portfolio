@@ -24,7 +24,7 @@ function Footer() {
 
         <a
           href="#home"
-          className="group flex items-center gap-2 text-[13px] text-zinc-500 transition hover:text-violet-400"
+          className="group flex items-center gap-2 text-[13px] text-zinc-400 transition hover:text-violet-400"
         >
           Back to top
           <span className="transition duration-300 group-hover:-translate-y-1">
