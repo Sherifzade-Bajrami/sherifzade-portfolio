@@ -44,6 +44,25 @@ function Hero({ startAnimation }) {
               ↗
             </span>
           </a>
+          <a
+            href="/cv/Sherifzade-Bajrami-CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="
+            group
+            inline-flex
+            items-center
+            text-base
+            text-zinc-300
+            transition
+            hover:text-violet-400
+          "
+          >
+            View CV
+            <span className="ml-2 inline-block transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+              ↗
+            </span>
+          </a>
         </div>
       </div>
 
