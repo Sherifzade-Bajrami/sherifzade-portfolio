@@ -41,7 +41,7 @@ function Expertise() {
   return (
     <section
       id="expertise"
-      className="border-t border-white/[0.08] px-6 py-28 lg:px-8 lg:py-36"
+      className="border-t border-white/[0.08] px-6 py-20 md:py-24 lg:px-8 lg:py-36"
     >
       <div className="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-[220px_1fr] lg:gap-10">
         {/* LEFT LABEL */}
@@ -61,35 +61,35 @@ function Expertise() {
           </h2>
 
           {/* CARDS */}
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2">
+            {" "}
             {expertise.map((item) => (
               <article
                 key={item.title}
                 className="
-                  group min-h-[220px]
-                  rounded-2xl
-                  border border-white/[0.09]
-                  bg-white/[0.025]
-                  p-7
-                  transition duration-300
-                  hover:-translate-y-1
-                  hover:border-violet-400/30
-                  hover:bg-white/[0.04]
-                "
+  group
+  rounded-2xl
+  border border-white/[0.09]
+  bg-white/[0.025]
+  p-6
+  transition duration-300
+  hover:-translate-y-1
+  hover:border-violet-400/30
+  hover:bg-white/[0.04]
+  md:min-h-[220px]
+  md:p-7
+"
               >
                 <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-violet-400">
                   {item.label}
                 </p>
-
-                <h3 className="mt-10 text-[22px] font-semibold tracking-[-0.8px] text-zinc-100">
+                <h3 className="mt-7 text-[22px] font-semibold tracking-[-0.8px] text-zinc-100 md:mt-10">
                   {item.title}
                 </h3>
-
                 <p className="mt-3 max-w-[430px] text-base leading-6 text-zinc-400">
                   {item.description}
                 </p>
-
-                <div className="mt-7 h-px w-0 bg-violet-400 transition-all duration-500 group-hover:w-12" />
+                <div className="mt-5 h-px w-0 bg-violet-400 transition-all duration-500 group-hover:w-12 md:mt-7" />{" "}
               </article>
             ))}
           </div>

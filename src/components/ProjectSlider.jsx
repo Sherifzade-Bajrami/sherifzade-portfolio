@@ -31,12 +31,15 @@ function ProjectSlider({ images }) {
       </div>
 
       {/* IMAGE */}
+      {/* IMAGE */}
       <div className="relative aspect-[16/10] overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentImage}
             src={images[currentImage]}
-            alt={`Custom WordPress project ${currentImage + 1}`}
+            alt={`Project screenshot ${currentImage + 1}`}
+            loading="lazy"
+            decoding="async"
             initial={{
               opacity: 0,
               scale: 1.02,

@@ -14,9 +14,16 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 
 function App() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    return sessionStorage.getItem("portfolio-intro-seen") !== "true";
+  });
 
   useEffect(() => {
+    if (!showIntro) return;
+
+    // Mark intro as seen for this browser session
+    sessionStorage.setItem("portfolio-intro-seen", "true");
+
     document.body.style.overflow = "hidden";
 
     const timer = setTimeout(() => {
@@ -39,7 +46,7 @@ function App() {
       <main className="min-h-screen bg-[#090b0e]">
         <Navbar />
 
-    <Hero startAnimation={!showIntro} />
+        <Hero startAnimation={!showIntro} />
         <TechMarquee />
         <About />
         <Expertise />

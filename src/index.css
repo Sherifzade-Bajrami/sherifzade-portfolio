@@ -4,6 +4,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 400px;
+  }
+}
+
 body {
   background: #090b0e;
 }

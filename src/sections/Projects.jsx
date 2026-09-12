@@ -9,7 +9,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="border-t border-white/[0.08] px-6 py-28 lg:px-8 lg:py-36"
+      className="border-t border-white/[0.08] px-6 py-20 md:py-24 lg:px-8 lg:py-36"
     >
       <div className="mx-auto grid max-w-[1240px] gap-12 lg:grid-cols-[220px_1fr] lg:gap-10">
         {/* LEFT SECTION LABEL */}
@@ -29,23 +29,24 @@ function Projects() {
             </span>
           </h2>
 
-          <p className="mt-8 max-w-[720px] text-[17px] leading-8 text-zinc-400">
-            A selection of custom WordPress projects focused on responsive
-            frontend development, flexible content and maintainable solutions.
+          <p className="mt-6 max-w-[720px] text-[16px] leading-7 text-zinc-400 sm:mt-8 sm:text-[17px] sm:leading-8">
+            A selection of web projects focused on responsive development,
+            flexible content, ecommerce and maintainable digital solutions.
           </p>
 
           {/* PROJECT SHOWCASE */}
           <div
             className="
-              mt-14
-              overflow-hidden
-              rounded-[24px]
-              border
-              border-white/[0.09]
-              bg-[#111318]
-              lg:grid
-              lg:grid-cols-[1.05fr_0.95fr]
-            "
+    mt-10
+    overflow-hidden
+    rounded-[24px]
+    border
+    border-white/[0.09]
+    bg-[#111318]
+    md:mt-14
+    lg:grid
+    lg:grid-cols-[1.05fr_0.95fr]
+  "
           >
             {/* LEFT - SCREENSHOT SLIDER */}
             <ProjectSlider images={customThemeScreenshots} />
@@ -58,8 +59,8 @@ function Projects() {
                 justify-center
                 border-t
                 border-white/[0.08]
-                p-8
-                sm:p-10
+                p-6
+                sm:p-8
                 lg:border-l
                 lg:border-t-0
                 lg:p-12
@@ -69,18 +70,18 @@ function Projects() {
                 Custom WordPress Themes
               </p>
 
-              <h3 className="mt-5 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:text-[24]">
+              <h3 className="mt-4 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:mt-5">
                 Custom theme development.
               </h3>
 
-              <p className="mt-6 max-w-[470px] text-[16px] leading-7 text-zinc-400">
+              <p className="mt-4 max-w-[470px] text-[16px] leading-7 text-zinc-400 sm:mt-6">
                 Custom-built WordPress websites developed with flexible theme
                 structures, dynamic content and responsive frontend
                 implementation.
               </p>
 
               {/* TECHNOLOGIES */}
-              <div className="mt-8 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                 {technologies.map((technology) => (
                   <span
                     key={technology}
@@ -101,7 +102,7 @@ function Projects() {
             </div>
           </div>
           {/* ELEMENTOR PROJECTS */}
-          <div className="mt-20">
+          <div className="mt-12 md:mt-14 lg:mt-20">
             <div
               className="
       overflow-hidden
@@ -124,8 +125,8 @@ function Projects() {
         justify-center
         border-t
         border-white/[0.08]
-        p-8
-        sm:p-10
+        p-6
+        sm:p-8
         lg:border-l
         lg:border-t-0
         lg:p-12
@@ -135,17 +136,18 @@ function Projects() {
                   Elementor Pro
                 </p>
 
-                <h3 className="mt-5 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:text-[24px]">
+                <h3 className="mt-4 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:mt-5">
                   Responsive Elementor development.
                 </h3>
 
-                <p className="mt-6 max-w-[470px] text-[16px] leading-7 text-zinc-400">
+                <p className="mt-4 max-w-[470px] text-[16px] leading-7 text-zinc-400 sm:mt-6">
+
                   Responsive WordPress websites built with Elementor Pro,
                   combining structured layouts, custom styling and flexible
                   content implementation.
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                   {[
                     "WordPress",
                     "Elementor Pro",
@@ -173,7 +175,7 @@ function Projects() {
             </div>
           </div>
           {/* WOOCOMMERCE PROJECTS */}
-          <div className="mt-20">
+          <div className="mt-12 md:mt-14 lg:mt-20">
             <div
               className="
       overflow-hidden
@@ -196,8 +198,8 @@ function Projects() {
         justify-center
         border-t
         border-white/[0.08]
-        p-8
-        sm:p-10
+        p-6
+        sm:p-8
         lg:border-l
         lg:border-t-0
         lg:p-12
@@ -207,18 +209,19 @@ function Projects() {
                   WooCommerce Development
                 </p>
 
-                <h3 className="mt-5 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:text-[24px]">
+                <h3 className="mt-4 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:mt-5">
+
                   Ecommerce experiences
                 </h3>
 
-                <p className="mt-6 max-w-[470px] text-[16px] leading-7 text-zinc-400">
+                <p className="mt-4 max-w-[470px] text-[16px] leading-7 text-zinc-400 sm:mt-6">
                   WooCommerce websites built around product presentation,
                   responsive shopping experiences, custom layouts and structured
                   ecommerce functionality.
                 </p>
 
                 {/* TECHNOLOGIES */}
-                <div className="mt-8 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                   {[
                     "WordPress",
                     "WooCommerce",

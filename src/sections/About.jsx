@@ -23,30 +23,27 @@ function About() {
 
         {/* RIGHT CONTENT */}
         <div>
-          <div className="grid items-start gap-12 lg:grid-cols-[260px_1fr] lg:gap-14">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-[280px_1fr] md:items-start md:gap-8 lg:grid-cols-[320px_1fr] lg:gap-14">
+            {" "}
             {/* PROFILE IMAGE */}
-            <div className="group relative">
-              <div className="absolute -inset-3 rounded-[22px] bg-violet-400/[0.06] opacity-0 blur-xl transition duration-500 group-hover:opacity-100" />
-
+            <div className="group">
               <div className="relative overflow-hidden rounded-[18px] border border-white/[0.09] bg-white/[0.02]">
                 <img
                   src={profileImage}
                   alt="Sherifzade Bajrami"
                   className="aspect-[4/5] w-full object-cover object-center grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
                 />
-
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />{" "}
               </div>
 
-              <div className="mt-4 flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-violet-400" />
+              <div className="mt-4 flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
 
-                <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-zinc-500">
+                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-600">
                   Web Developer
-                </p>
+                </span>
               </div>
             </div>
-
             {/* ABOUT TEXT */}
             <div>
               <h2 className="max-w-[760px] text-[42px] font-semibold leading-[1.08] tracking-[-2px] text-zinc-100 sm:text-[52px] lg:text-[58px]">
