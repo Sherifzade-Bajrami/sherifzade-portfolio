@@ -1,39 +1,39 @@
 const expertise = [
   {
     label: "FRONTEND",
-    title: "React Development",
+    title: "Frontend Development",
     description:
-      "Modern interfaces built with React, JavaScript, reusable components and responsive frontend architecture.",
+      "Responsive and maintainable interfaces built with JavaScript, React, HTML5, CSS3, Tailwind CSS, Bootstrap and Sass/SCSS.",
   },
   {
-    label: "BUILD",
-    title: "WordPress + ACF",
+    label: "WORDPRESS",
+    title: "Custom WordPress Development",
     description:
-      "Custom WordPress development, Elementor Pro, ACF, Gutenberg and structured content solutions.",
+      "Custom themes, tailored functionality, PHP development, Gutenberg and structured WordPress solutions built around real project requirements.",
+  },
+  {
+    label: "DYNAMIC CONTENT",
+    title: "Elementor Pro + ACF",
+    description:
+      "Flexible WordPress websites using Elementor Pro, ACF, custom post types and reusable dynamic content structures.",
   },
   {
     label: "COMMERCE",
     title: "WooCommerce",
     description:
-      "Online stores, digital products, checkout flows, payment integrations and eCommerce customization.",
+      "Ecommerce solutions covering product systems, digital products, checkout customization, payment workflows and responsive shopping experiences.",
   },
   {
-    label: "CODE",
-    title: "PHP + Frontend",
+    label: "HEADLESS",
+    title: "Headless WordPress",
     description:
-      "PHP, HTML5, CSS3, JavaScript, Tailwind CSS, Sass/SCSS and component-based frontend development.",
+      "WordPress used as a content backend with modern frontend technologies including React, Gatsby and GraphQL integrations.",
   },
   {
     label: "QUALITY",
-    title: "Performance + SEO",
+    title: "Performance + Debugging",
     description:
-      "Performance optimization, technical SEO fundamentals and responsive experiences across different devices.",
-  },
-  {
-    label: "WORKFLOW",
-    title: "Debugging + Deployment",
-    description:
-      "Troubleshooting, staging, backups, Git workflows, deployment and production website maintenance.",
+      "Troubleshooting, performance optimization, responsive testing, technical SEO, staging, deployment and production maintenance.",
   },
 ];
 
@@ -54,9 +54,9 @@ function Expertise() {
         {/* RIGHT CONTENT */}
         <div>
           <h2 className="max-w-[900px] text-[42px] font-semibold leading-[1.08] tracking-[-2px] text-zinc-100 sm:text-[52px] lg:text-[58px]">
-            Tools I use to take digital products from{" "}
+            Technologies and approaches I use to build{" "}
             <span className="font-serif font-normal italic text-violet-400">
-              idea to production.
+              modern web experiences.
             </span>
           </h2>
 

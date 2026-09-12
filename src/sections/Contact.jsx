@@ -152,7 +152,7 @@ function Contact() {
 
               {/* LINKEDIN */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/sherifzade-bajrami-144036264"
                 target="_blank"
                 rel="noreferrer"
                 className="
