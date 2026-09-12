@@ -13,12 +13,12 @@ function Footer() {
             SB<span className="text-violet-400">.</span>
           </a>
 
-          <p className="mt-2 text-[13px] text-zinc-600">
+          <p className="mt-2 text-[13px] text-zinc-400">
             Web Developer
           </p>
         </div>
 
-        <p className="text-[13px] text-zinc-600">
+        <p className="text-[13px] text-zinc-400">
           © {currentYear} Sherifzade Bajrami. All rights reserved.
         </p>
 

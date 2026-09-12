@@ -76,7 +76,7 @@ function Experience() {
                     {item.role}
                   </h3>
 
-                  <p className="mt-2 text-[16px] text-zinc-500">
+                  <p className="mt-2 text-[16px] text-zinc-400">
                     {item.company}
                   </p>
 

@@ -52,7 +52,7 @@ function ProjectCard({ project, index }) {
         <span className="h-2 w-2 rounded-full bg-amber-400/70" />
         <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
 
-        <span className="ml-auto font-mono text-[9px] text-zinc-600">
+        <span className="ml-auto font-mono text-[9px] text-zinc-400">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>

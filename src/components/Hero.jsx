@@ -75,7 +75,7 @@ function Hero({ startAnimation }) {
             <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
 
-            <span className="ml-auto font-mono text-sm text-zinc-600">
+            <span className="ml-auto font-mono text-sm text-zinc-400">
               developer.js
             </span>
           </div>
@@ -88,21 +88,21 @@ function Hero({ startAnimation }) {
               <p className="text-[12px] font-medium text-zinc-300">
                 Responsive
               </p>
-              <p className="mt-1 text-[11px] text-zinc-600">Desktop → Mobile</p>
+              <p className="mt-1 text-[11px] text-zinc-400">Desktop → Mobile</p>
             </div>
 
             <div className="border-r border-white/[0.06] px-2 py-5 text-center">
               <p className="text-[12px] font-medium text-zinc-300">
                 Performance
               </p>
-              <p className="mt-1 text-[11px] text-zinc-600">Speed focused</p>
+              <p className="mt-1 text-[11px] text-zinc-400">Speed focused</p>
             </div>
 
             <div className="px-2 py-5 text-center">
               <p className="text-[12px] font-medium text-zinc-300">
                 Maintainable
               </p>
-              <p className="mt-1 text-[11px] text-zinc-600">Clean structure</p>
+              <p className="mt-1 text-[11px] text-zinc-400">Clean structure</p>
             </div>
           </div>
         </div>

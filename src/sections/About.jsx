@@ -39,7 +39,7 @@ function About() {
               <div className="mt-4 flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
 
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-600">
+                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400">
                   Web Developer
                 </span>
               </div>

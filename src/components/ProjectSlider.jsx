@@ -24,7 +24,7 @@ function ProjectSlider({ images }) {
         <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
 
-        <span className="ml-auto font-mono text-[10px] text-zinc-600">
+        <span className="ml-auto font-mono text-[10px] text-zinc-400">
           {String(currentImage + 1).padStart(2, "0")} /{" "}
           {String(images.length).padStart(2, "0")}
         </span>
