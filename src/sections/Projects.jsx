@@ -1,8 +1,7 @@
 import customThemeScreenshots from "../data/projects";
 import ProjectSlider from "../components/ProjectSlider";
 import elementorScreenshots from "../data/elementorProjects";
-import woocommerceScreenshots from "../data/woocommerceProjects";
-
+import taskflowScreenshots from "../data/taskflowProjects";
 function Projects() {
   const technologies = ["WordPress", "PHP", "ACF", "JavaScript", "SCSS"];
 
@@ -105,14 +104,14 @@ function Projects() {
           <div className="mt-12 md:mt-14 lg:mt-20">
             <div
               className="
-      overflow-hidden
-      rounded-[24px]
-      border
-      border-white/[0.09]
-      bg-[#111318]
-      lg:grid
-      lg:grid-cols-[1.05fr_0.95fr]
-    "
+              overflow-hidden
+              rounded-[24px]
+              border
+              border-white/[0.09]
+              bg-[#111318]
+              lg:grid
+              lg:grid-cols-[1.05fr_0.95fr]
+              "
             >
               {/* LEFT - SCREENSHOTS */}
               <ProjectSlider images={elementorScreenshots} />
@@ -120,52 +119,52 @@ function Projects() {
               {/* RIGHT - STATIC CONTENT */}
               <div
                 className="
-        flex
-        flex-col
-        justify-center
-        border-t
-        border-white/[0.08]
-        p-6
-        sm:p-8
-        lg:border-l
-        lg:border-t-0
-        lg:p-12
-      "
+                flex
+                flex-col
+                justify-center
+                border-t
+                border-white/[0.08]
+                p-6
+                sm:p-8
+                lg:border-l
+                lg:border-t-0
+                lg:p-12
+          "
               >
                 <p className="font-mono text-[13px] font-semibold uppercase tracking-[0.17em] text-violet-400">
-                  Elementor Pro
+                  WordPress Solutions
                 </p>
 
                 <h3 className="mt-4 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:mt-5">
-                  Responsive Elementor development.
+                  Elementor & WooCommerce development.
                 </h3>
 
                 <p className="mt-4 max-w-[470px] text-[16px] leading-7 text-zinc-400 sm:mt-6">
-
-                  Responsive WordPress websites built with Elementor Pro,
-                  combining structured layouts, custom styling and flexible
-                  content implementation.
+                  Responsive WordPress websites and ecommerce experiences built
+                  with Elementor Pro, WooCommerce, dynamic content and custom
+                  frontend styling.
                 </p>
-
+                {/* TECHNOLOGIES */}
                 <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                   {[
                     "WordPress",
                     "Elementor Pro",
+                    "WooCommerce",
                     "ACF",
-                    "CSS / SCSS",
+                    "PHP",
                     "JavaScript",
                   ].map((technology) => (
                     <span
                       key={technology}
                       className="
-              rounded-full
-              border
-              border-white/[0.09]
-              px-3
-              py-1.5
-              text-[12px]
-              text-zinc-400
-            "
+                      rounded-full
+                      border
+                      border-white/[0.09]
+                      px-3
+                      py-1.5
+                      text-[12px]
+                      text-zinc-400
+                      "
                     >
                       {technology}
                     </span>
@@ -174,7 +173,7 @@ function Projects() {
               </div>
             </div>
           </div>
-          {/* WOOCOMMERCE PROJECTS */}
+          {/* FULL STACK PROJECT */}
           <div className="mt-12 md:mt-14 lg:mt-20">
             <div
               className="
@@ -188,7 +187,7 @@ function Projects() {
     "
             >
               {/* LEFT - SCREENSHOT SLIDER */}
-              <ProjectSlider images={woocommerceScreenshots} />
+              <ProjectSlider images={taskflowScreenshots} />
 
               {/* RIGHT - STATIC CONTENT */}
               <div
@@ -206,28 +205,30 @@ function Projects() {
       "
               >
                 <p className="font-mono text-[13px] font-semibold uppercase tracking-[0.17em] text-violet-400">
-                  WooCommerce Development
+                  Full-Stack Application
                 </p>
 
                 <h3 className="mt-4 text-[24px] font-semibold leading-[1.08] tracking-[-1.5px] text-zinc-100 sm:mt-5">
-
-                  Ecommerce experiences
+                  TaskFlow SaaS.
                 </h3>
 
                 <p className="mt-4 max-w-[470px] text-[16px] leading-7 text-zinc-400 sm:mt-6">
-                  WooCommerce websites built around product presentation,
-                  responsive shopping experiences, custom layouts and structured
-                  ecommerce functionality.
+                  A full-stack project management application built with a
+                  modern React frontend and a Node.js backend, featuring
+                  authentication, projects, tasks, role-based access and
+                  structured data management.
                 </p>
 
                 {/* TECHNOLOGIES */}
                 <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                   {[
-                    "WordPress",
-                    "WooCommerce",
-                    "PHP",
-                    "Elementor Pro",
-                    "JavaScript",
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Express",
+                    "MySQL",
+                    "Prisma",
+                    "Tailwind CSS",
                   ].map((technology) => (
                     <span
                       key={technology}
