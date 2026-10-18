@@ -224,7 +224,6 @@ function IntroLoader() {
             "
           >
             Sherifzade
-
             <span
               className="
                 block
@@ -278,15 +277,17 @@ function IntroLoader() {
               duration: 0.5,
             }}
             className="
-              mt-6
-              font-mono
-              text-base
-              uppercase
-              tracking-[0.3em]
-              text-zinc-500
-            "
+  mt-6
+  font-mono
+  text-[12px]
+  uppercase
+  tracking-[0.22em]
+  text-zinc-500
+  sm:text-sm
+  sm:tracking-[0.28em]
+"
           >
-            Web Developer
+            Full-Stack Engineer · AI Integration
           </motion.p>
         </div>
       </div>
