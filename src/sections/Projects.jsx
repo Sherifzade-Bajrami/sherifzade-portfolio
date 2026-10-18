@@ -48,7 +48,7 @@ function Projects() {
   "
           >
             {/* LEFT - SCREENSHOT SLIDER */}
-            <ProjectSlider images={customThemeScreenshots} />
+            <ProjectSlider images={customThemeScreenshots} fit="contain" />
 
             {/* RIGHT - STATIC CONTENT */}
             <div
@@ -114,7 +114,8 @@ function Projects() {
               "
             >
               {/* LEFT - SCREENSHOTS */}
-              <ProjectSlider images={elementorScreenshots} />
+              <ProjectSlider images={elementorScreenshots} 
+              fit="contain"/>
 
               {/* RIGHT - STATIC CONTENT */}
               <div
@@ -187,7 +188,7 @@ function Projects() {
     "
             >
               {/* LEFT - SCREENSHOT SLIDER */}
-              <ProjectSlider images={taskflowScreenshots} />
+              <ProjectSlider images={taskflowScreenshots} fit="contain" />
 
               {/* RIGHT - STATIC CONTENT */}
               <div

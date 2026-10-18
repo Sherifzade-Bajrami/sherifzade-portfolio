@@ -2,17 +2,20 @@ import { motion } from "motion/react";
 
 const technologies = [
   "React",
+  "TypeScript",
   "JavaScript",
+  "Node.js",
+  "Express.js",
+  "REST APIs",
+  "JWT",
+  "MySQL",
+  "Prisma ORM",
+  "PHP",
   "Tailwind CSS",
+  "AI Integration",
   "WordPress",
   "WooCommerce",
-  "PHP",
-  "ACF",
-  "Elementor Pro",
-  "Sass / SCSS",
   "Git",
-  "HTML5",
-  "CSS3",
 ];
 
 function TechnologyGroup() {
@@ -107,7 +110,7 @@ function TechMarquee() {
           x: ["0%", "-50%"],
         }}
         transition={{
-          duration: 32,
+          duration: 38,
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop",

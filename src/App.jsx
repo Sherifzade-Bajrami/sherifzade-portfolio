@@ -10,7 +10,6 @@ import TechMarquee from "./components/TechMarquee";
 import About from "./sections/About";
 import Expertise from "./sections/Expertise";
 import Projects from "./sections/Projects";
-import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 
 function App() {
@@ -51,7 +50,6 @@ function App() {
         <About />
         <Expertise />
         <Projects />
-        <Experience />
         <Contact />
 
         <Footer />

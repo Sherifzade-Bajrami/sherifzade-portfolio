@@ -85,7 +85,7 @@ function Contact() {
                 text-zinc-900/75
               "
             >
-              Have a role or project in mind?
+              Have a role, product or project in mind?
             </p>
 
             {/* TITLE */}
@@ -102,7 +102,7 @@ function Contact() {
                 lg:tracking-[-4px]
               "
             >
-              Let's build something that{" "}
+              Let's build software that{" "}
               <span className="font-serif font-normal italic">
                 works beautifully.
               </span>
@@ -119,9 +119,10 @@ function Contact() {
                 sm:text-[18px]
               "
             >
-              I'm open to web development opportunities, remote roles and
-              project-based collaborations. If you have something interesting
-              in mind, feel free to reach out.
+              I'm open to Full-Stack Engineer and Software Developer
+              opportunities, remote roles and project-based collaborations
+              involving modern web applications, APIs and AI integrations. If
+              you're building something interesting, feel free to reach out.
             </p>
 
             {/* ACTIONS */}

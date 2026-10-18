@@ -4,7 +4,6 @@ function Footer() {
   return (
     <footer className="border-t border-white/[0.08] px-6 py-8 lg:px-8">
       <div className="mx-auto flex max-w-[1240px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-        
         <div>
           <a
             href="#home"
@@ -14,7 +13,7 @@ function Footer() {
           </a>
 
           <p className="mt-2 text-[13px] text-zinc-400">
-            Web Developer
+            Full-Stack Engineer · AI Integration
           </p>
         </div>
 

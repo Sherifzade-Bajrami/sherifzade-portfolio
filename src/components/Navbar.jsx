@@ -7,7 +7,6 @@ function Navbar() {
     { name: "About", href: "#about" },
     { name: "Expertise", href: "#expertise" },
     { name: "Work", href: "#projects" },
-    { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
 

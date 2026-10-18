@@ -3,37 +3,37 @@ const expertise = [
     label: "FRONTEND",
     title: "Frontend Development",
     description:
-      "Responsive and maintainable interfaces built with JavaScript, React, HTML5, CSS3, Tailwind CSS, Bootstrap and Sass/SCSS.",
+      "Responsive and maintainable interfaces built with React, TypeScript, JavaScript, Tailwind CSS and modern frontend practices.",
   },
   {
-    label: "WORDPRESS",
-    title: "Custom WordPress Development",
+    label: "BACKEND",
+    title: "Backend & REST APIs",
     description:
-      "Custom themes, tailored functionality, PHP development, Gutenberg and structured WordPress solutions built around real project requirements.",
+      "Server-side applications and REST APIs built with Node.js, Express, PHP, authentication and structured application logic.",
   },
   {
-    label: "DYNAMIC CONTENT",
-    title: "Elementor Pro + ACF",
+    label: "DATABASE",
+    title: "Data & Persistence",
     description:
-      "Flexible WordPress websites using Elementor Pro, ACF, custom post types and reusable dynamic content structures.",
+      "Database-driven applications using MySQL, Prisma ORM and structured relational data models.",
   },
   {
-    label: "COMMERCE",
-    title: "WooCommerce",
+    label: "FULL STACK",
+    title: "Full-Stack Applications",
     description:
-      "Ecommerce solutions covering product systems, digital products, checkout customization, payment workflows and responsive shopping experiences.",
+      "End-to-end development connecting frontend interfaces, backend services, authentication, APIs and databases.",
   },
   {
-    label: "HEADLESS",
-    title: "Headless WordPress",
+    label: "AI",
+    title: "AI Integration",
     description:
-      "WordPress used as a content backend with modern frontend technologies including React, Gatsby and GraphQL integrations.",
+      "Integrating AI-powered features and intelligent workflows into modern web applications and digital products.",
   },
   {
-    label: "QUALITY",
-    title: "Performance + Debugging",
+    label: "CMS & COMMERCE",
+    title: "WordPress & WooCommerce",
     description:
-      "Troubleshooting, performance optimization, responsive testing, technical SEO, staging, deployment and production maintenance.",
+      "Custom WordPress, Elementor, ACF and WooCommerce solutions for content-driven and ecommerce projects.",
   },
 ];
 
@@ -56,40 +56,44 @@ function Expertise() {
           <h2 className="max-w-[900px] text-[42px] font-semibold leading-[1.08] tracking-[-2px] text-zinc-100 sm:text-[52px] lg:text-[58px]">
             Technologies and approaches I use to build{" "}
             <span className="font-serif font-normal italic text-violet-400">
-              modern web experiences.
+              modern software products.
             </span>
           </h2>
 
           {/* CARDS */}
           <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2">
-            {" "}
             {expertise.map((item) => (
               <article
                 key={item.title}
                 className="
-  group
-  rounded-2xl
-  border border-white/[0.09]
-  bg-white/[0.025]
-  p-6
-  transition duration-300
-  hover:-translate-y-1
-  hover:border-violet-400/30
-  hover:bg-white/[0.04]
-  md:min-h-[220px]
-  md:p-7
-"
+                  group
+                  rounded-2xl
+                  border
+                  border-white/[0.09]
+                  bg-white/[0.025]
+                  p-6
+                  transition
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-violet-400/30
+                  hover:bg-white/[0.04]
+                  md:min-h-[220px]
+                  md:p-7
+                "
               >
                 <p className="font-mono text-sm font-bold uppercase tracking-[0.16em] text-violet-400">
                   {item.label}
                 </p>
+
                 <h3 className="mt-7 text-[22px] font-semibold tracking-[-0.8px] text-zinc-100 md:mt-10">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 max-w-[430px] text-base leading-6 text-zinc-400">
                   {item.description}
                 </p>
-                <div className="mt-5 h-px w-0 bg-violet-400 transition-all duration-500 group-hover:w-12 md:mt-7" />{" "}
+
+                <div className="mt-5 h-px w-0 bg-violet-400 transition-all duration-500 group-hover:w-12 md:mt-7" />
               </article>
             ))}
           </div>
